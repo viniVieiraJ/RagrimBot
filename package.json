@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.5.0",
+    "discord-buttons": "^4.0.0-deprecated",
     "discord.js": "^12.5.3",
+    "express": "^4.17.3",
     "ffmpeg": "0.0.4",
     "ytdl-core": "^4.5.0"
   }

@@ -164,11 +164,6 @@ if(message.author.username != botUsername)
                 client.commands.get('invade by chance').execute(message); // Says if you should invade 
                 break;
             }else
-            if(messageContent.includes("cunha") && messageContent.includes("yasuo"))
-            {
-                client.commands.get('yasuo by chance').execute(message); // Says if cunha should go with yasuo 
-                break;
-            }else
             if(messageContent.includes("manda") || messageContent.includes("da") || messageContent.includes("jogo") || messageContent.includes("jogar") || messageContent.includes("lança") || messageContent.includes("ve") || messageContent.includes("passa"))
             {
                 client.commands.get('champion selector').execute(message, messageContent); // Sends a comp or a random champion per role
@@ -178,23 +173,12 @@ if(message.author.username != botUsername)
             {
                 message.reply("to aqui sim amigo!");
                 break;
-            }else
-            if(messageContent.includes("peça") || messageContent.includes("pede") || messageContent.includes("se"))
-            {
-              if(messageContent.includes("desculp"))
-              message.channel.send("<@" + tigoId + "> e <@" + dudaId + ">, eu gostaria de pedir desculpas pelo inconveniente causado e peço que me perdoem pois não ocorrerá novamente");
-              break;
             }
         }
     }
 
     for(let i = 0; i < biggestArrayLenght; i++) // Looks for simpler commands first
     {
-        if(messageContent.includes(maedoluizActivationWords[i])) // Talks about someones mother
-        {
-            client.commands.get('rubis our treasure').execute(message);
-            break;
-        }else
         if(messageContent.includes(greetingsActivationWords[i])) // Greets users
         {
             client.commands.get('greetings').execute(message, messageContent);
@@ -265,7 +249,7 @@ client.on('voiceStateUpdate', (oldState, newState) =>
 }});
 }
 client.on('presenceUpdate', (oldPresence, newPresence) => {
-    let member = newPresence.member;
+    let member = 0; //newPresence.member;
     let text = "";
 
     if (member.id === '579468801083572246' && newPresence.guild.id == '712277864250343497') {
